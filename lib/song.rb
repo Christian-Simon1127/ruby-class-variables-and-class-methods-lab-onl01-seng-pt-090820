@@ -52,4 +52,21 @@ class Song
     ret_hash
   end
   
+  def self.artist_count
+    ret_hash = {}
+    self.artists.each {|item|
+      temp_num = 0
+      @@artists.each {|i2em|
+        if item == i2em
+          temp_num += 1
+        end
+      }
+      ret_hash[item] = temp_num
+    }
+    ret_hash
+  end 
+  
+  
+  
+  
 end

@@ -39,7 +39,16 @@ class Song
   end
   
   def self.genre_count 
-    
+    ret_hash = {}
+    self.genres.each {|item|
+      temp_num = 0
+      @@genres.each {|i2em|
+        if item == i2em
+          temp_num += 1
+        end
+      }
+      ret_hash[item] = temp_num
+    }
   end
   
 end

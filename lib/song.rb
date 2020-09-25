@@ -49,6 +49,7 @@ class Song
       }
       ret_hash[item] = temp_num
     }
+    ret_hash
   end
   
 end
